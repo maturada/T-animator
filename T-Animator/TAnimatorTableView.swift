@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TAnimatorTableView: UITableView, UITableViewDelegate {
+open class TAnimatorTableView: UITableView, UITableViewDelegate {
     
     enum AnimationType {
         
@@ -30,7 +30,7 @@ class TAnimatorTableView: UITableView, UITableViewDelegate {
     
     // MARK: Initialization.
     
-    override func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         
         setup()
@@ -42,7 +42,7 @@ class TAnimatorTableView: UITableView, UITableViewDelegate {
         setup()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         setup()
@@ -50,7 +50,7 @@ class TAnimatorTableView: UITableView, UITableViewDelegate {
     
     // MARK: - UITableViewDelegate
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    private func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         let animator = TAnimatorFactory.makeTanimator(using: tableView)
         
@@ -68,7 +68,7 @@ class TAnimatorTableView: UITableView, UITableViewDelegate {
         animatorDelegate?.tableView(self, willDisplay: cell, forRowAt: indexPath)
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    private func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         animatorDelegate?.tableView(self, didSelectRowAt: indexPath)
     }
