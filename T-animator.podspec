@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "T-animator"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "T-animator is a small tool for tableViews to make better UX/UI for our users"
   spec.description  = "Make your tableView animations better, nicer and more user friendly to achieve the best user expereince."
   spec.homepage     = "https://github.com/maturada"

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		D53390D721F3F59800F0B8DA /* T_Animator.h in Headers */ = {isa = PBXBuildFile; fileRef = D53390D521F3F59800F0B8DA /* T_Animator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D53390DE21F3F5A700F0B8DA /* TAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53390DD21F3F5A700F0B8DA /* TAnimator.swift */; };
+		D53390E021F4B45800F0B8DA /* TAnimatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53390DF21F4B45800F0B8DA /* TAnimatorFactory.swift */; };
+		D53390E221F4B4A800F0B8DA /* TAnimatorTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53390E121F4B4A800F0B8DA /* TAnimatorTableView.swift */; };
+		D53390E421F4B7CB00F0B8DA /* TAnimatorTablewViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53390E321F4B7CB00F0B8DA /* TAnimatorTablewViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +19,9 @@
 		D53390D521F3F59800F0B8DA /* T_Animator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = T_Animator.h; sourceTree = "<group>"; };
 		D53390D621F3F59800F0B8DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D53390DD21F3F5A700F0B8DA /* TAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAnimator.swift; sourceTree = "<group>"; };
+		D53390DF21F4B45800F0B8DA /* TAnimatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAnimatorFactory.swift; sourceTree = "<group>"; };
+		D53390E121F4B4A800F0B8DA /* TAnimatorTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAnimatorTableView.swift; sourceTree = "<group>"; };
+		D53390E321F4B7CB00F0B8DA /* TAnimatorTablewViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAnimatorTablewViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +56,10 @@
 			children = (
 				D53390D521F3F59800F0B8DA /* T_Animator.h */,
 				D53390DD21F3F5A700F0B8DA /* TAnimator.swift */,
+				D53390DF21F4B45800F0B8DA /* TAnimatorFactory.swift */,
 				D53390D621F3F59800F0B8DA /* Info.plist */,
+				D53390E121F4B4A800F0B8DA /* TAnimatorTableView.swift */,
+				D53390E321F4B7CB00F0B8DA /* TAnimatorTablewViewDelegate.swift */,
 			);
 			path = "T-Animator";
 			sourceTree = "<group>";
@@ -134,6 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D53390E421F4B7CB00F0B8DA /* TAnimatorTablewViewDelegate.swift in Sources */,
+				D53390E221F4B4A800F0B8DA /* TAnimatorTableView.swift in Sources */,
+				D53390E021F4B45800F0B8DA /* TAnimatorFactory.swift in Sources */,
 				D53390DE21F3F5A700F0B8DA /* TAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
