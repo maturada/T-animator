@@ -41,6 +41,7 @@ open class TAnimatorFactory {
     
     static public func makeTanimator(using tableView: UITableView) -> TAnimator
     static public func makeAnimation(for cell: UITableViewCell, at indexPath: IndexPath, in tableView: UITableView) -> ((TAnimatorSettings) -> Void) 
+}
 ```
 
 Simple, easy to use.
