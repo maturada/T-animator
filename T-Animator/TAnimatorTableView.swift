@@ -18,9 +18,9 @@ public struct TAnimatorSettings {
         case slideIn
     }
     
-    let type: AnimationType
-    let duration: TimeInterval
-    let delay: TimeInterval
+    public var type: AnimationType = .bounceIn
+    public var duration: TimeInterval = 0.5
+    public var delay: TimeInterval = 0.2
     
     public init(type: AnimationType, duration: TimeInterval, delay: TimeInterval) {
         
@@ -30,12 +30,12 @@ public struct TAnimatorSettings {
     }
 }
 
-public class TAnimatorTableView: UITableView, UITableViewDelegate {
+public class TAnimatorTableView: UITableView {
     
-    public var animator: TAnimator!
+    var animator: TAnimator!
     
     ///  Default animation settings.
-    private var settings: TAnimatorSettings = TAnimatorSettings(
+    public var settings: TAnimatorSettings = TAnimatorSettings(
         type: .bounceIn,
         duration: 0.5,
         delay: 0.2
@@ -63,22 +63,24 @@ public class TAnimatorTableView: UITableView, UITableViewDelegate {
         
         setup()
     }
+}
+
+// MARK: Private inteface.
+
+private extension TAnimatorTableView {
     
-    // MARK: - Public interface.
-    
-    public func update(settings: TAnimatorSettings) {
-    
-        self.settings = settings
-    }
-    
-    public func setDelegate(_ delegate: TAnimatorTablewViewDelegate) {
+    private func setup() {
         
-        self.animatorDelegate = delegate
+        delegate = self
+        animator = TAnimatorFactory.makeTanimator(using: self)
     }
+}
+
+// MARK: - UITableViewDelegate
+
+extension TAnimatorTableView: UITableViewDelegate {
     
-    // MARK: - UITableViewDelegate
-    
-    private func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         let animator = TAnimatorFactory.makeTanimator(using: tableView)
         
@@ -93,23 +95,13 @@ public class TAnimatorTableView: UITableView, UITableViewDelegate {
             
             animator.slideIn(cell: cell, duration: settings.duration, delay: settings.delay)
         }
+        
         animatorDelegate?.tableView(self, willDisplay: cell, forRowAt: indexPath)
     }
     
-    private func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         animatorDelegate?.tableView(self, didSelectRowAt: indexPath)
     }
     
-}
-
-// MARK: Private inteface.
-
-private extension TAnimatorTableView {
-    
-    private func setup() {
-        
-        delegate = self
-        animator = TAnimatorFactory.makeTanimator(using: self)
-    }
 }
