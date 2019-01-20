@@ -1,14 +1,11 @@
 # T-animator
 
-Small and simple tool's offering 3 nice animations for your tableView, cells.
-
-Easily instantiate **T-animator** with your **UITableView**.
+Easily instantiate **T-animator** with your specific instance of **UITableView**.
 And perorm animations at **willDisplay cell: IndxPath**.
 
 Or use our *TAnimatorTableViewController*.
-Setup duration, delay and animatoin you would like to perform.
+Setup duration, delay and animatoin type you would like to perform.
 
-Use TAnimatorTableViewController.
 Setup with your own configuration.
 Small and easy, less than **300** lines of code.
 ```Swift
