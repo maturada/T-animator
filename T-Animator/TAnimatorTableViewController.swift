@@ -27,6 +27,19 @@ public class TAnimatorTableViewController: UITableViewController {
         
         setup()
     }
+    
+    open override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+    }
+    
+    public override func viewWillDisappear(_ animated: Bool) {
+        
+        super.viewWillDisappear(animated)
+        
+    }
+    
 }
 
 // MARK: Private inteface.
@@ -60,5 +73,4 @@ extension TAnimatorTableViewController {
             animator.slideIn(cell: cell, duration: settings.duration, delay: settings.delay)
         }
     }
-    
 }

@@ -11,7 +11,6 @@
 		D53390DE21F3F5A700F0B8DA /* TAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53390DD21F3F5A700F0B8DA /* TAnimator.swift */; };
 		D53390E021F4B45800F0B8DA /* TAnimatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53390DF21F4B45800F0B8DA /* TAnimatorFactory.swift */; };
 		D53390E221F4B4A800F0B8DA /* TAnimatorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53390E121F4B4A800F0B8DA /* TAnimatorTableViewController.swift */; };
-		D53390E421F4B7CB00F0B8DA /* TAnimatorTablewViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53390E321F4B7CB00F0B8DA /* TAnimatorTablewViewDelegate.swift */; };
 		D53390E621F4CC7200F0B8DA /* TAnimatorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53390E521F4CC7200F0B8DA /* TAnimatorSettings.swift */; };
 /* End PBXBuildFile section */
 
@@ -22,7 +21,6 @@
 		D53390DD21F3F5A700F0B8DA /* TAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAnimator.swift; sourceTree = "<group>"; };
 		D53390DF21F4B45800F0B8DA /* TAnimatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAnimatorFactory.swift; sourceTree = "<group>"; };
 		D53390E121F4B4A800F0B8DA /* TAnimatorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAnimatorTableViewController.swift; sourceTree = "<group>"; };
-		D53390E321F4B7CB00F0B8DA /* TAnimatorTablewViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAnimatorTablewViewDelegate.swift; sourceTree = "<group>"; };
 		D53390E521F4CC7200F0B8DA /* TAnimatorSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAnimatorSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,10 +57,9 @@
 				D53390D521F3F59800F0B8DA /* T_Animator.h */,
 				D53390DD21F3F5A700F0B8DA /* TAnimator.swift */,
 				D53390DF21F4B45800F0B8DA /* TAnimatorFactory.swift */,
-				D53390D621F3F59800F0B8DA /* Info.plist */,
 				D53390E121F4B4A800F0B8DA /* TAnimatorTableViewController.swift */,
-				D53390E321F4B7CB00F0B8DA /* TAnimatorTablewViewDelegate.swift */,
 				D53390E521F4CC7200F0B8DA /* TAnimatorSettings.swift */,
+				D53390D621F3F59800F0B8DA /* Info.plist */,
 			);
 			path = "T-Animator";
 			sourceTree = "<group>";
@@ -147,7 +144,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D53390E621F4CC7200F0B8DA /* TAnimatorSettings.swift in Sources */,
-				D53390E421F4B7CB00F0B8DA /* TAnimatorTablewViewDelegate.swift in Sources */,
 				D53390E221F4B4A800F0B8DA /* TAnimatorTableViewController.swift in Sources */,
 				D53390E021F4B45800F0B8DA /* TAnimatorFactory.swift in Sources */,
 				D53390DE21F3F5A700F0B8DA /* TAnimator.swift in Sources */,
