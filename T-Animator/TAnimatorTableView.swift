@@ -10,7 +10,7 @@ import UIKit
 
 public struct TAnimatorSettings {
     
-    enum AnimationType {
+    public enum AnimationType {
         
         /// All possible options what T-animator's offering.
         case bounceIn
@@ -21,6 +21,13 @@ public struct TAnimatorSettings {
     let type: AnimationType
     let duration: TimeInterval
     let delay: TimeInterval
+    
+    public init(type: AnimationType, duration: TimeInterval, delay: TimeInterval) {
+        
+        self.type = type
+        self.duration = duration
+        self.delay = delay
+    }
 }
 
 public class TAnimatorTableView: UITableView, UITableViewDelegate {
