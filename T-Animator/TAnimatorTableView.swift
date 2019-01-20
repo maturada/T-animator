@@ -21,12 +21,12 @@ open class TAnimatorTableView: UITableView, UITableViewDelegate {
     private var animator: TAnimator!
     
     /// Animation settings.
-    var animationType: AnimationType = .bounceIn
-    var duration: TimeInterval = 0.5
-    var delay: TimeInterval = 0.2
+    internal var animationType: AnimationType = .bounceIn
+    internal var duration: TimeInterval = 0.5
+    internal var delay: TimeInterval = 0.2
     
     /// Set animator delegate.
-    weak var animatorDelegate: TAnimatorTablewViewDelegate?
+    internal weak var animatorDelegate: TAnimatorTablewViewDelegate?
     
     // MARK: Initialization.
     
@@ -36,7 +36,7 @@ open class TAnimatorTableView: UITableView, UITableViewDelegate {
         setup()
     }
     
-    override init(frame: CGRect, style: UITableView.Style) {
+    override public init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         
         setup()
