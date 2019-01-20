@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol TAnimatorTablewViewDelegate: class {
+public protocol TAnimatorTablewViewDelegate: class {
     
     func tableView(_ tableView: TAnimatorTableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
     func tableView(_ tableView: TAnimatorTableView, didSelectRowAt indexPath: IndexPath)

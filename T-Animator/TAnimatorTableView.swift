@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class TAnimatorTableView: UITableView, UITableViewDelegate {
+public struct TAnimatorSettings {
     
     enum AnimationType {
         
@@ -18,15 +18,24 @@ open class TAnimatorTableView: UITableView, UITableViewDelegate {
         case slideIn
     }
     
-    private var animator: TAnimator!
+    let type: AnimationType
+    let duration: TimeInterval
+    let delay: TimeInterval
+}
+
+public class TAnimatorTableView: UITableView, UITableViewDelegate {
     
-    /// Animation settings.
-    internal var animationType: AnimationType = .bounceIn
-    internal var duration: TimeInterval = 0.5
-    internal var delay: TimeInterval = 0.2
+    public var animator: TAnimator!
     
-    /// Set animator delegate.
-    internal weak var animatorDelegate: TAnimatorTablewViewDelegate?
+    ///  Default animation settings.
+    private var settings: TAnimatorSettings = TAnimatorSettings(
+        type: .bounceIn,
+        duration: 0.5,
+        delay: 0.2
+    )
+    
+    /// Animator delegate.
+    public weak var animatorDelegate: TAnimatorTablewViewDelegate?
     
     // MARK: Initialization.
     
@@ -48,22 +57,34 @@ open class TAnimatorTableView: UITableView, UITableViewDelegate {
         setup()
     }
     
+    // MARK: - Public interface.
+    
+    public func update(settings: TAnimatorSettings) {
+    
+        self.settings = settings
+    }
+    
+    public func setDelegate(_ delegate: TAnimatorTablewViewDelegate) {
+        
+        self.animatorDelegate = delegate
+    }
+    
     // MARK: - UITableViewDelegate
     
     private func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         let animator = TAnimatorFactory.makeTanimator(using: tableView)
         
-        switch animationType {
+        switch settings.type {
         case .bounceIn:
             
-            animator.bounceIn(cell: cell, duration: duration, delay: delay)
+            animator.bounceIn(cell: cell, duration: settings.duration, delay: settings.delay)
         case .fadeIn:
             
-            animator.fadeIn(cell: cell, duration: duration, delay: delay)
+            animator.fadeIn(cell: cell, duration: settings.duration, delay: settings.delay)
         case .slideIn:
             
-            animator.slideIn(cell: cell, duration: duration, delay: delay)
+            animator.slideIn(cell: cell, duration: settings.duration, delay: settings.delay)
         }
         animatorDelegate?.tableView(self, willDisplay: cell, forRowAt: indexPath)
     }
