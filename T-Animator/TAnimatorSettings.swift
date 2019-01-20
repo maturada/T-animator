@@ -13,8 +13,9 @@ public struct TAnimatorSettings {
     public enum AnimationType {
         
         /// All possible options what T-animator's offering.
-        case bounceIn
         case fadeIn
+        case bounceIn
+        case moveFadeIn
         case slideIn
     }
     

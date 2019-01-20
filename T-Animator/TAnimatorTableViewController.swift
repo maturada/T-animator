@@ -10,18 +10,20 @@ import UIKit
 
 open class TAnimatorTableViewController: UITableViewController {
     
-    ///  Default animation settings.
+    // MARK: - Settings.
+    
+    /// Set and override default settings.
     public var settings: TAnimatorSettings = TAnimatorSettings(
         type: .bounceIn,
-        duration: 0.5,
-        delay: 0.2
+        duration: 0.7,
+        delay: 0.3
     )
     
-    // MARK: - UITableViewDelegate
+    // MARK: - UITableViewDelegate.
     
     open override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
-        let animation = TAnimatorFactory.makeAnimation(for: cell, in: tableView)
+        let animation = TAnimatorFactory.makeAnimation(for: cell, at: indexPath, in: tableView)
         animation(settings)
     }
 }
