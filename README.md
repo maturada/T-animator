@@ -11,8 +11,12 @@ Setup duration, delay and animatoin you would like to perform.
 
 Simple, easy to use.
 
+Bounce in:
 
+!["Bounce in animation"](bounceIn.gif)
 
 ## Setup
 
 **pod 'T-animator', :git => 'https://github.com/maturada/T-animator'**
+
+**import T_animator**
