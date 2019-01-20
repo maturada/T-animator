@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class TAnimatorTableViewController: UITableViewController {
+open class TAnimatorTableViewController: UITableViewController {
     
     private var animator: TAnimator!
     
@@ -34,7 +34,7 @@ public class TAnimatorTableViewController: UITableViewController {
         
     }
     
-    public override func viewWillDisappear(_ animated: Bool) {
+    open override func viewWillDisappear(_ animated: Bool) {
         
         super.viewWillDisappear(animated)
         
@@ -57,7 +57,7 @@ private extension TAnimatorTableViewController {
 
 extension TAnimatorTableViewController {
     
-    public override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    open override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         let animator = TAnimatorFactory.makeTanimator(using: tableView)
         

@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "T-animator"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "T-animator is a small tool for tableViews to make better UX/UI for our users"
   spec.description  = "Make your tableView animations better, nicer and more user friendly to achieve the best user expereince."
   spec.homepage     = "https://github.com/maturada"
@@ -48,7 +48,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/maturada/T-animator.git", :tag => "1.0.0"}
+  spec.source       = { :git => "https://github.com/maturada/T-animator.git", :tag => "1.0.1"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
