@@ -1,15 +1,16 @@
 # T-animator
 
-Easily instantiate **T-animator** with your specific instance of **UITableView**.
-And perorm animations at **willDisplay cell: IndxPath**.
+![Swift](https://img.shields.io/badge/Swift-4.2-orange.svg)
 
-Or use our *TAnimatorTableViewController*.
+Easily instantiate **T-animator** with your instance of **UITableView**.
+
+And perorm animations on **willDisplay cell: IndxPath**.
+Or just use *TAnimatorTableViewController*.
+
 Setup duration, delay and animatoin type you would like to perform.
+Small and easy, less than **250** lines of code.
 
-Setup with your own configuration.
-Small and easy, less than **300** lines of code.
 ```Swift
-
 open class TAnimatorTableViewController: UITableViewController {
     
     // MARK: - Settings.
@@ -43,17 +44,12 @@ open class TAnimatorFactory {
 
 Simple, easy to use.
 
-#### Bounce in:
+ !["Fade in animation"](fadeIn.gif)
 
-!["Bounce in animation"](bounceIn.gif)
+## How to use
 
-#### Fade in:
+```Ruby
+pod 'T-animator', :git => 'https://github.com/maturada/T-animator'
 
-!["Fade in animation"](fadeIn.gif)
-
-
-## Setup
-
-**pod 'T-animator', :git => 'https://github.com/maturada/T-animator'**
-
-**import T_animator**
+import T_animator
+```
